@@ -4,7 +4,7 @@ import Error from "./Error";
 import { generarId } from "../helpers";
 
 // eslint-disable-next-line react/prop-types
-export const Formulario = ({ pacientes, setPacientes, paciente }) => {
+export const Formulario = ({ pacientes, setPacientes, paciente, setPaciente }) => {
   const [nombre, setNombre] = useState("");
   const [propietario, setPropietario] = useState("");
   const [email, setEmail] = useState("");
@@ -52,6 +52,7 @@ export const Formulario = ({ pacientes, setPacientes, paciente }) => {
       );
 
       setPacientes(pacientesActualizados);
+      setPaciente({})
     } else {
       // Nuevo registro
       objetoPaciente.id = generarId(); // Se crea un nuevo id
